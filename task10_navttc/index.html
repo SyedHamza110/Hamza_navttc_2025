@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Hover Effect</title>
+    <style>
+    
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.image {
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover .image {
+    transform: translate(50px, 50px); 
+}
+
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="image.png" style="height: 300px;" alt="" class="image">
+    </div>
+</body>
+</html>
