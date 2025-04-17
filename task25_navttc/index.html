@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Down Content Example</title>
+    
+    <style>
+        #content {
+            display: none; 
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #0a3b56;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task 25 Navttc</h1>
+    <button id="slideButton">Show Content</button>
+    
+    <div id="content">
+        <p>Make a button that slides down some content when clicked using jQuery..</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#slideButton').click(function() {
+                $('#content').slideToggle(); 
+            });
+        });
+    </script>
+</body>
+</html>

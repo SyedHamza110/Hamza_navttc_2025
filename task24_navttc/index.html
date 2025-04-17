@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show/Hide Paragraph</title>
+    <style>
+        #paragraph {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task 24 Navttc</h1>
+    <p id="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum itaque, ipsum optio minus voluptate, nobis facilis numquam aspernatur cupiditate ullam quo ducimus. Voluptates impedit iusto quis blanditiis expedita voluptate aliquam..</p>
+    
+    <button onclick="hideParagraph()">Hide</button>
+    <button onclick="showParagraph()">Show</button>
+
+    <script>
+        function hideParagraph() {
+            document.getElementById('paragraph').style.display = 'none';
+        }
+
+        function showParagraph() {
+            document.getElementById('paragraph').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
