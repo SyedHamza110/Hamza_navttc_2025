@@ -1,0 +1,273 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.navbar-toggler-icon{
+    border: 1px solid gray;
+    border-radius: 5px ;
+    
+}
+
+
+/* Navbar Styles */
+.navbar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.navbar .navbar-brand {
+    color: #000000;
+    font-size: 1.8rem;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #000000;
+    font-size: 1.1rem;
+}
+
+
+
+.navbar .navbar-nav .nav-link:hover {
+    color: #1900ff;
+}
+
+
+
+/* Banner Styles */
+.hero-section {
+    background: url('banner-image.jpg') no-repeat center center/cover;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+/* Button Styles */
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #218838;
+}
+
+/* Course List Styles */
+.course-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+}
+
+.course-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.course-card-body {
+    padding: 20px;
+}
+
+.course-card-body h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.course-card-body p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.course-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.course-card-footer a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.course-card-footer a:hover {
+    color: #0056b3;
+}
+
+/* Footer Styles */
+footer {
+   
+    
+        background-color: #212529;
+        color: #fff;
+    
+      
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1rem;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #007bff;
+}
+
+/* Forms */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form .form-group {
+    margin-bottom: 15px;
+}
+
+form .form-group label {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+form .form-control {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+form .form-control:focus {
+    border-color: #007bff;
+}
+
+form .btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+form .btn-submit {
+    background-color: #007bff;
+    color: #fff;
+}
+
+form .btn-submit:hover {
+    background-color: #0056b3;
+}
+
+/* Course Detail Styles */
+.course-detail-header {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.course-detail-header h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.course-detail-header p {
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+.course-detail-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.course-detail-content .left {
+    width: 60%;
+}
+
+.course-detail-content .right {
+    width: 35%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.course-detail-content .right h4 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.course-detail-content .right ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.course-detail-content .right ul li {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.course-detail-content .right .btn-enroll {
+    background-color: #28a745;
+    color: #fff;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.course-detail-content .right .btn-enroll:hover {
+    background-color: #218838;
+}
