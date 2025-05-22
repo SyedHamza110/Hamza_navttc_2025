@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Resume | MyPortfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f8;
+    }
+
+    .nav-link {
+      position: relative;
+      padding-bottom: 4px;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background-color: #00d1b2;
+      transition: width 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .resume-section {
+      padding: 60px 20px;
+      background: #fff;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+      max-width: 900px;
+      margin: auto;
+      border-radius: 12px;
+    }
+
+    h2.section-title {
+      border-bottom: 2px solid #00d1b2;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+
+    .download-btn {
+      background-color: #00d1b2;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-weight: 500;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .download-btn:hover {
+      background-color: #009e8b;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark py-3">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">MyPortfolio</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">Resume</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Resume Section -->
+<section class="resume-section mt-5" id="cv-content">
+  <div class="text-center mb-4">
+    <h1 class="fw-bold">Syed Hamza Hussain Rizvi</h1>
+    <p class="text-muted">Curriculum Vitae</p>
+  </div>
+
+  <h2 class="section-title">Objective</h2>
+  <p>To work with all renowned organization in challenging environment where I have an opportunity to enhance my skills and abilities at professional level.</p>
+
+  <h2 class="section-title">Personal Information</h2>
+  <ul class="list-unstyled">
+    <li><strong>Father’s Name:</strong> Syed Azher Hussain Rizvi</li>
+    <li><strong>Phone No:</strong> +92-318-2836362</li>
+    <li><strong>Date of Birth:</strong> 20-02-2004</li>
+    <li><strong>Domicile:</strong> Hyderabad (Sindh)</li>
+    <li><strong>Nationality:</strong> Pakistani</li>
+    <li><strong>Religion:</strong> Islam</li>
+    <li><strong>Address:</strong> House # 192, Block D, Saddat Colony, Unit # 9 Latifabad, Hyderabad</li>
+  </ul>
+
+  <h2 class="section-title">Academic Qualification</h2>
+  <table class="table table-bordered">
+    <thead class="table-light">
+      <tr>
+        <th>Degree</th>
+        <th>Board/University</th>
+        <th>Year</th>
+        <th>Marks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>B.A</td>
+        <td>University of Sindh</td>
+        <td>2023</td>
+        <td>Continue</td>
+      </tr>
+      <tr>
+        <td>Intermediate</td>
+        <td>BISEH</td>
+        <td>2022</td>
+        <td>793 / 1100</td>
+      </tr>
+      <tr>
+        <td>Matric</td>
+        <td>BISEH</td>
+        <td>2020</td>
+        <td>635 / 850</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="section-title">Computer Skills</h2>
+  <ul><li>Web Development</li></ul>
+
+  <h2 class="section-title">Experience</h2>
+  <ul><li>Fresh</li></ul>
+
+  <h2 class="section-title">Languages</h2>
+  <ul>
+    <li>English</li>
+    <li>Urdu</li>
+  </ul>
+
+  <!-- <div class="text-center mt-4">
+    <button class="download-btn" onclick="downloadPDF()">Download CV</button>
+  </div> -->
+  <!-- Button -->
+<div class="text-center mt-4">
+  <button class="download-btn" data-bs-toggle="modal" data-bs-target="#formatModal">Download CV</button>
+</div>
+
+<!-- Format Selection Modal -->
+<div class="modal fade" id="formatModal" tabindex="-1" aria-labelledby="formatModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="formatModalLabel">Select Format</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="formatForm">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="pdf" id="pdfOption">
+            <label class="form-check-label" for="pdfOption">PDF</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="jpg" id="jpgOption">
+            <label class="form-check-label" for="jpgOption">JPG</label>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" onclick="handleDownload()">Download</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>
+
+<!-- Footer -->
+<footer class="text-center py-4 mt-5">
+  <p class="mb-0">&copy; 2025 MyPortfolio. All Rights Reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<!-- Include html2canvas CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<!-- <script>
+  function downloadPDF() {
+    const element = document.getElementById("cv-content");
+
+    html2canvas(element, {
+      scale: 3, // higher scale = better quality
+      useCORS: true
+    }).then(canvas => {
+      const imageData = canvas.toDataURL("image/jpeg", 1.0);
+      const link = document.createElement('a');
+      link.href = imageData;
+      link.download = 'Syed_Hamza_CV.jpg';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  }
+</script> -->
+<script>
+  function handleDownload() {
+    const downloadBtn = document.querySelector('.download-btn');
+    const element = document.getElementById("cv-content");
+
+    // Get selected options
+    const pdfChecked = document.getElementById("pdfOption").checked;
+    const jpgChecked = document.getElementById("jpgOption").checked;
+
+    // Hide download button before capture
+    downloadBtn.style.display = "none";
+
+    setTimeout(() => {
+      html2canvas(element, { scale: 3, useCORS: true }).then(canvas => {
+        if (jpgChecked) {
+          const imageData = canvas.toDataURL("image/jpeg", 1.0);
+          const link = document.createElement('a');
+          link.href = imageData;
+          link.download = 'Syed_Hamza_CV.jpg';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        }
+
+        if (pdfChecked) {
+          const opt = {
+            margin:       0,
+            filename:     'Syed_Hamza_CV.pdf',
+            image:        { type: 'jpeg', quality: 0.98 },
+            html2canvas:  { scale: 3 },
+            jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+          };
+          html2pdf().set(opt).from(element).save();
+        }
+
+        // Show button again
+        downloadBtn.style.display = "inline-block";
+
+        // Hide modal
+        const modal = bootstrap.Modal.getInstance(document.getElementById('formatModal'));
+        modal.hide();
+      });
+    }, 300); // Small delay ensures hide effect is rendered
+  }
+</script>
+
+
+</body>
+</html>
