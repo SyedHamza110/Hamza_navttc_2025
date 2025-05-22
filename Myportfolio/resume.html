@@ -152,8 +152,35 @@
   </ul>
 
   <div class="text-center mt-4">
-    <button class="download-btn" onclick="downloadPDF()">Download CV</button>
+  <button class="download-btn" data-bs-toggle="modal" data-bs-target="#formatModal">Download CV</button>
+</div>
+
+<!-- Format Selection Modal -->
+<div class="modal fade" id="formatModal" tabindex="-1" aria-labelledby="formatModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="formatModalLabel">Select Format</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="formatForm">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="pdf" id="pdfOption">
+            <label class="form-check-label" for="pdfOption">PDF</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="jpg" id="jpgOption">
+            <label class="form-check-label" for="jpgOption">JPG</label>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" onclick="handleDownload()">Download</button>
+      </div>
+    </div>
   </div>
+</div>
 </section>
 
 <!-- Footer -->
@@ -167,23 +194,51 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
 <script>
-  function downloadPDF() {
+  function handleDownload() {
+    const downloadBtn = document.querySelector('.download-btn');
     const element = document.getElementById("cv-content");
 
-    html2canvas(element, {
-      scale: 3, // higher scale = better quality
-      useCORS: true
-    }).then(canvas => {
-      const imageData = canvas.toDataURL("image/jpeg", 1.0);
-      const link = document.createElement('a');
-      link.href = imageData;
-      link.download = 'Syed_Hamza_CV.jpg';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    });
+    // Get selected options
+    const pdfChecked = document.getElementById("pdfOption").checked;
+    const jpgChecked = document.getElementById("jpgOption").checked;
+
+    // Hide download button before capture
+    downloadBtn.style.display = "none";
+
+    setTimeout(() => {
+      html2canvas(element, { scale: 3, useCORS: true }).then(canvas => {
+        if (jpgChecked) {
+          const imageData = canvas.toDataURL("image/jpeg", 1.0);
+          const link = document.createElement('a');
+          link.href = imageData;
+          link.download = 'Syed_Hamza_CV.jpg';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        }
+
+        if (pdfChecked) {
+          const opt = {
+            margin:       0,
+            filename:     'Syed_Hamza_CV.pdf',
+            image:        { type: 'jpeg', quality: 0.98 },
+            html2canvas:  { scale: 3 },
+            jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+          };
+          html2pdf().set(opt).from(element).save();
+        }
+
+        // Show button again
+        downloadBtn.style.display = "inline-block";
+
+        // Hide modal
+        const modal = bootstrap.Modal.getInstance(document.getElementById('formatModal'));
+        modal.hide();
+      });
+    }, 300); // Small delay ensures hide effect is rendered
   }
 </script>
+
 
 </body>
 </html>
